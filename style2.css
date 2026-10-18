@@ -1,36 +1,72 @@
 body {
   display: flow-root;
-  color: white;
+  color: #ffffff;
   background-image: url(images/wallpaper.png);
-  /* Keeps the background locked in place while content scrolls */
   background-attachment: fixed;
-  /* Recommended complementary properties */
-  background-size: cover; /* Fills the screen without stretching */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents image repeating */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 1000;
   font-style: normal;
+  line-height: 1.6;
   text-align: justify;
-  padding: 24px;
-  padding-right: 0;
+  padding: 24px 0 24px 24px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+#navbar ul {
+  font-size: 2rem;
+  list-style-type: circle;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 1rem;
+  border-bottom-style: solid;
+  width: 820px;
+}
+
+#navbar a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar li {
+  float: left;
+}
+
+body > header h1 {
+  display: inline-block;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  border-bottom-style: solid;
+}
+
+body > header p {
+  margin-top: 0;
 }
 
 img {
-  float: right;
-  margin: 0 0 1rem 1rem;
   position: absolute;
   top: -250px;
   right: 0;
-  float: none;
   margin: 0;
 }
 
 #about {
-  padding-right: 600px;
   max-width: none;
   margin-right: 0;
+  padding-right: 600px;
 }
 
 #about p {
