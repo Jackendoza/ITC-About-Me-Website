@@ -72,3 +72,8 @@ img {
 #about p {
   text-align: left;
 }
+
+#favorites a {
+  color: turquoise;
+  text-decoration: none;
+}
