@@ -1,4 +1,5 @@
 body {
+  display: flow-root;
   color: white;
   background-image: url(images/wallpaper.png);
   /* Keeps the background locked in place while content scrolls */
@@ -13,4 +14,25 @@ body {
   font-style: normal;
   text-align: justify;
   padding: 24px;
+  padding-right: 0;
+}
+
+img {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  position: absolute;
+  top: -250px;
+  right: 0;
+  float: none;
+  margin: 0;
+}
+
+#about {
+  padding-right: 600px;
+  max-width: none;
+  margin-right: 0;
+}
+
+#about p {
+  text-align: left;
 }
