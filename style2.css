@@ -1,9 +1,15 @@
 body {
   color: white;
-  background-color: black;
+  background-image: url(images/wallpaper.png);
+  /* Keeps the background locked in place while content scrolls */
+  background-attachment: fixed;
+  /* Recommended complementary properties */
+  background-size: cover; /* Fills the screen without stretching */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repeating */
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 1000;
   font-style: normal;
   text-align: justify;
   padding: 24px;
