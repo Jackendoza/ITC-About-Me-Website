@@ -10,7 +10,7 @@ body {
   font-weight: 1000;
   line-height: 1.6;
   text-align: justify;
-  padding: 24px 0 24px 24px;
+  padding: 16px;
 }
 
 h1,
@@ -21,23 +21,48 @@ h3 {
   letter-spacing: 0.5px;
 }
 
-body > header h1 {
+#profile-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 700px;
+  align-items: start;
+  gap: 24px;
+}
+
+#info-column {
+  min-width: 0;
+}
+
+.profile-photo {
+  display: block;
+  width: 900px;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  border-radius: 18px;
+  justify-self: end;
+  transform: translateY(-290px);
+}
+
+#info-column > header h1 {
   display: inline-block;
+  max-width: 100%;
   font-size: 4rem;
+  text-align: left;
   margin-bottom: 1rem;
   border-bottom: solid;
 }
 
-body > header p {
+#info-column > header p {
   margin-top: 0;
 }
 
 #navbar ul {
   display: inline-block;
   width: 820px;
+  max-width: 100%;
+  box-sizing: border-box;
   margin: 0 0 1rem;
   padding: 0;
-  overflow: hidden;
   border-bottom: solid;
   font-size: 2rem;
   list-style-type: circle;
@@ -59,71 +84,52 @@ body > header p {
   border-radius: 6px;
 }
 
-img {
-  position: absolute;
-  top: -250px;
-  right: 0;
+.glass-card {
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 1.25rem 0;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  background: rgba(15, 30, 48, 0.58);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+}
+
+.glass-card > header h2 {
+  margin-top: 0;
 }
 
 #about {
-  padding-right: 600px;
+  margin-top: 0;
 }
 
 #about p {
   text-align: left;
 }
 
+#schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+#schedule th,
+#schedule td {
+  padding: 0.8rem 0.65rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#schedule th {
+  color: #d9f3ff;
+}
+
+#schedule tr:last-child td {
+  border-bottom: 0;
+}
+
 #favorites a {
   color: turquoise;
   text-decoration: none;
-}
-
-@media (max-width: 700px) {
-  body {
-    padding: 16px;
-    text-align: left;
-  }
-
-  body > header h1 {
-    max-width: 100%;
-    font-size: clamp(1.8rem, 8vw, 3rem);
-  }
-
-  #navbar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: visible;
-    font-size: 1rem;
-    list-style-position: inside;
-  }
-
-  #navbar li {
-    float: none;
-  }
-
-  #navbar a {
-    display: block;
-    padding: 0.5rem;
-  }
-
-  img {
-    position: static;
-    display: block;
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-    margin: 1rem auto;
-  }
-
-  #about {
-    padding-right: 0;
-  }
-
-  #schedule {
-    overflow-x: auto;
-  }
 }

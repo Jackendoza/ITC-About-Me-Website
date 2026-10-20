@@ -9,115 +9,102 @@
 </head>
 
 <body>
-    <header>
-        <h1>Jacken Ismael C. Mendoza</h1>
-        <p>Your Nerdy Computer Science Student from 1A</p>
-    </header>
+    <main id="profile-layout">
+        <div id="info-column">
+            <header>
+                <h1>Jacken Ismael C. Mendoza</h1>
+                <p>Your Nerdy Computer Science Student from 1A</p>
+            </header>
 
-    <main>
-        <section id="navbar">
-            <aside>
+            <nav id="navbar">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#hobbies">Hobbies</a></li>
                     <li><a href="#schedule">Schedule</a></li>
                     <li><a href="#favorites">Favorites</a></li>
                 </ul>
-            </aside>
-        </section>
+            </nav>
 
-        <img src="images/IMG_4186.png" width="900" height="1200">
+            <section id="about" class="glass-card">
+                <header>
+                    <h2>About Me</h2>
+                </header>
+                <p>Hello! My name is Jacken Ismael C. Mendoza. I am a first year BSCS student at Bicol University. The
+                    reason why I chose Computer Science is because coding and programming is all I have ever wanted, and
+                    that solving problems on computers have always challenged and motivated me in the first place, and
+                    studying it will only make me learn more about the things I can achieve when learning about this
+                    course. And that's the reason why I chose Computer Science.</p>
+            </section>
 
-        <section id="about">
-            <header>
-                <h2>About Me</h2>
-            </header>
+            <section id="hobbies" class="glass-card">
+                <header>
+                    <h2>Hobbies and Goals</h2>
+                </header>
+                <h3>Hobbies</h3>
+                <ul>
+                    <li>Swimming</li>
+                    <li>Reading Comic Books</li>
+                    <li>Collecting Action Figures</li>
+                    <li>Coding and Programming</li>
+                </ul>
+                <h3>My Top 3 Goals</h3>
+                <ol>
+                    <li>Graduating College with a CS Degree</li>
+                    <li>Helping my parents retire as early as possible</li>
+                    <li>Having a successful and peaceful life</li>
+                </ol>
+            </section>
 
-            <p id="p1">Hello! My name is Jacken Ismael C. Mendoza. I am a first year BSCS student at Bicol University.
-                The reason why I chose Computer Science is because coding and programming is all I have ever wanted, and
-                that solving problems on computers have always challenged and motivated me in the first place, and
-                studying it will
-                only make me learn more about the things I can achieve when learning about this course. And that's the
-                reason why I chose Computer
-                Science.
-            </p>
-        </section>
+            <section id="schedule" class="glass-card">
+                <header>
+                    <h2>Class Schedule</h2>
+                </header>
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Day</th>
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>CS101: Introduction to Computing</td>
+                        <td>Monday, Wednesday</td>
+                        <td>7:30 - 9:00</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Programming 1</td>
+                        <td>Monday, Wednesday</td>
+                        <td>9:00 - 11:30</td>
+                    </tr>
+                    <tr>
+                        <td>Mathematical Analysis</td>
+                        <td>Tuesday, Thursday, Friday</td>
+                        <td>10:30 - 11:30</td>
+                    </tr>
+                    <tr>
+                        <td>Physics for Computing</td>
+                        <td>Tuesday, Thursday</td>
+                        <td>9:00 - 10:00</td>
+                    </tr>
+                </table>
+            </section>
 
-        <section id="hobbies">
-            <header>
-                <h2>Hobbies and Goals</h2>
-            </header>
+            <section id="favorites" class="glass-card">
+                <header>
+                    <h2>My Favorites</h2>
+                </header>
+                <p>One webiste I enjoy visiting is <a href="https://github.com/Jackendoza" target="_blank"
+                        rel="noopener">GitHub</a> because this is where I put all of my personal projects. As a computer
+                    science student, I love GitHub because it turns your raw coding assignments into a polished
+                    portfolio while giving you free access to essential developer tools.</p>
+            </section>
+        </div>
 
-            <h3>Hobbies</h3>
-
-            <ul>
-                <li>Swimming</li>
-                <li>Reading Comic Books</li>
-                <li>Collecting Action Figures</li>
-                <li>Coding and Programming</li>
-            </ul>
-
-            <h3>My Top 3 Goals</h3>
-
-            <ol>
-                <li>Graduating College with a CS Degree</li>
-                <li>Helping my parents retire as early as possible</li>
-                <li>Having a successful and peaceful life</li>
-            </ol>
-        </section>
-
-        <section id="schedule">
-            <header>
-                <h2>Class Schedule</h2>
-            </header>
-
-            <table>
-                <tr align="center">
-                    <th width="250">Subject</th>
-                    <th width="200">Day</th>
-                    <th width="200">Time</th>
-                </tr>
-                <tr align="center">
-                    <td>CS101: Introduction to Computing</td>
-                    <td>Monday, Wednesday</td>
-                    <td>7:30 - 9:00</td>
-                </tr>
-                <tr align="center">
-                    <td>Computer Programming 1</td>
-                    <td>Monday, Wednesday</td>
-                    <td>9:00 - 11:30</td>
-                </tr>
-                <tr align="center">
-                    <td>Mathematical Analysis</td>
-                    <td>Tuesday, Thursday, Friday</td>
-                    <td>10:30 - 11:30</td>
-                </tr>
-                <tr align="center">
-                    <td>Physics for Computing</td>
-                    <td>Tuesday, Thursday</td>
-                    <td>9:00 - 10:00</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="favorites">
-            <header>
-                <h2>My Favorites</h2>
-            </header>
-
-            <p>One webiste I enjoy visiting is <a href="https://github.com/Jackendoza" target="_blank"> GitHub
-                </a>
-                because this is where I put all of my personal projects. As a computer science student, I love GitHub
-                because it turns your raw coding assignments into a polished portfolio while giving you free access to
-                essential developer tools.
-            </p>
-        </section>
+        <img class="profile-photo" src="images/IMG_4186.png" alt="Photo of Jacken Ismael C. Mendoza">
     </main>
 
     <footer>
         <p>Made by Jacken Ismael C. Mendoza for CS101, Bicol University.</p>
     </footer>
-
 </body>
 
 </html>
