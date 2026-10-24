@@ -1,0 +1,11 @@
+Reflection - About Me Website
+Jacken Ismael C. Mendoza, CS101, Bicol University
+
+1. What was easy?
+Writing the HTML was the easiest part for me. Headings, lists, and tables were easy to learn because each tag shows what it is for. Linking my CSS file and changing colors and fonts was easy too. I liked seeing the page change right after I saved my work.
+
+2. What was confusing?
+The layout was the most confusing part, mostly putting my photo on the right side. My first try used big fixed sizes, so it looked okay on my screen but could look bad on other screens. I also did not know when to use float, grid, or flexbox, because they can all put things side by side. Making the line under the navbar match the line under my name was hard too.
+
+3. What is one thing you would improve?
+I would make my page look better on phones and small screens. I added a rule that puts everything in one column, but I want to test it on more devices. I would also fix small spelling mistakes like "Webiste" in the title. Later, I want to learn JavaScript so I can add more cool things to my page.
