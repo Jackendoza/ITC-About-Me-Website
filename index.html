@@ -1,34 +1,49 @@
 <!DOCTYPE html>
+<!--
+  REQUIREMENTS CHECKLIST
+  [x] 1. Structure: DOCTYPE, html, head, body, header, nav, main, footer
+  [x] 2. Content: one h1, several h2, a paragraph about me, an image, lists, a table, and a link
+  [x] 3. CSS: style.css is linked in the head and has more than 5 style rules
+  [x] 4. Layout: Flexbox is used for the navbar and for the two-column layout (see style.css)
+  [x] 5. Comments: this file and style.css both have comments that explain the code
+-->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connects this page to the CSS file that styles it -->
     <link rel="stylesheet" href="style.css">
     <title>Jacken's About Me Webiste</title>
 </head>
 
 <body>
+    <!-- TOP PART: my name, tagline, and the navigation bar -->
+    <div id="top">
+        <header>
+            <h1>Jacken Ismael C. Mendoza</h1>
+            <p>Your Nerdy Computer Science Student from 1A</p>
+        </header>
+
+        <!-- Each link jumps to the section whose id matches (for example #about) -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- MAIN PART: the cards on the left and my photo on the right -->
     <main id="profile-layout">
+
         <div id="info-column">
-            <header>
-                <h1>Jacken Ismael C. Mendoza</h1>
-                <p>Your Nerdy Computer Science Student from 1A</p>
-            </header>
 
-            <nav id="navbar">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="#favorites">Favorites</a></li>
-                </ul>
-            </nav>
-
+            <!-- About section -->
             <section id="about" class="glass-card">
-                <header>
-                    <h2>About Me</h2>
-                </header>
+                <h2>About Me</h2>
                 <p>Hello! My name is Jacken Ismael C. Mendoza. I am a first year BSCS student at Bicol University. The
                     reason why I chose Computer Science is because coding and programming is all I have ever wanted, and
                     that solving problems on computers have always challenged and motivated me in the first place, and
@@ -36,18 +51,21 @@
                     course. And that's the reason why I chose Computer Science.</p>
             </section>
 
+            <!-- Hobbies and goals section -->
             <section id="hobbies" class="glass-card">
-                <header>
-                    <h2>Hobbies and Goals</h2>
-                </header>
+                <h2>Hobbies and Goals</h2>
+
                 <h3>Hobbies</h3>
+                <!-- ul = bullet list -->
                 <ul>
                     <li>Swimming</li>
                     <li>Reading Comic Books</li>
                     <li>Collecting Action Figures</li>
                     <li>Coding and Programming</li>
                 </ul>
+
                 <h3>My Top 3 Goals</h3>
+                <!-- ol = numbered list -->
                 <ol>
                     <li>Graduating College with a CS Degree</li>
                     <li>Helping my parents retire as early as possible</li>
@@ -55,10 +73,11 @@
                 </ol>
             </section>
 
+            <!-- Class schedule section -->
             <section id="schedule" class="glass-card">
-                <header>
-                    <h2>Class Schedule</h2>
-                </header>
+                <h2>Class Schedule</h2>
+
+                <!-- tr = table row, th = heading cell, td = normal cell -->
                 <table>
                     <tr>
                         <th>Subject</th>
@@ -88,20 +107,23 @@
                 </table>
             </section>
 
+            <!-- Favorites section -->
             <section id="favorites" class="glass-card">
-                <header>
-                    <h2>My Favorites</h2>
-                </header>
+                <h2>My Favorites</h2>
                 <p>One webiste I enjoy visiting is <a href="https://github.com/Jackendoza" target="_blank"
                         rel="noopener">GitHub</a> because this is where I put all of my personal projects. As a computer
                     science student, I love GitHub because it turns your raw coding assignments into a polished
                     portfolio while giving you free access to essential developer tools.</p>
             </section>
+
         </div>
 
+        <!-- My photo (the alt text describes the picture) -->
         <img class="profile-photo" src="images/IMG_4186.png" alt="Photo of Jacken Ismael C. Mendoza">
+
     </main>
 
+    <!-- BOTTOM PART -->
     <footer>
         <p>Made by Jacken Ismael C. Mendoza for CS101, Bicol University.</p>
     </footer>

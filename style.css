@@ -1,18 +1,24 @@
+/* ===== PAGE SETTINGS ===== */
+
+/* Makes the nav links scroll smoothly instead of jumping */
 html {
   scroll-behavior: smooth;
 }
 
+/* Settings for the whole page: text color, wallpaper, font, spacing */
 body {
   color: white;
   background: url("images/wallpaper.png") center / cover no-repeat fixed;
   font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
   font-weight: 1000;
   line-height: 1.6;
   text-align: justify;
   padding: 16px;
+  max-width: 1400px;   /* keeps the page from getting too wide */
+  margin: 0 auto;      /* centers the page */
 }
 
+/* All headings use the same font */
 h1,
 h2,
 h3 {
@@ -21,55 +27,38 @@ h3 {
   letter-spacing: 0.5px;
 }
 
-#profile-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 700px;
-  align-items: start;
-  gap: 24px;
-}
 
-#info-column {
-  min-width: 0;
-}
+/* ===== TOP PART: name and navbar ===== */
 
-.profile-photo {
-  display: block;
-  width: 900px;
-  max-width: none;
-  height: auto;
-  margin: 0;
-  border-radius: 18px;
-  justify-self: end;
-  transform: translateY(-290px);
-}
-
-#info-column > header h1 {
-  display: inline-block;
+/* This box is only as wide as my name, so the line under the navbar
+   is the same length as the line under my name */
+#top {
+  width: fit-content;
   max-width: 100%;
+}
+
+#top h1 {
+  display: inline-block;
   font-size: 4rem;
   text-align: left;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   border-bottom: solid;
 }
 
-#info-column > header p {
+#top p {
   margin-top: 0;
 }
 
+/* FLEXBOX: display: flex puts the links side by side in one row */
 #navbar ul {
-  display: inline-block;
-  width: 820px;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;               /* links go to the next line if there is no space */
+  margin: 0 0 1.5rem;
   padding: 0;
   border-bottom: solid;
   font-size: 2rem;
   list-style-type: circle;
-}
-
-#navbar li {
-  float: left;
+  list-style-position: inside;
 }
 
 #navbar a {
@@ -79,16 +68,46 @@ h3 {
   transition: background-color 0.2s ease;
 }
 
+/* When the mouse is on a link, show a light background */
 #navbar a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 6px;
 }
 
+
+/* ===== MAIN PART: two columns ===== */
+
+/* FLEXBOX: puts the cards and the photo side by side */
+#profile-layout {
+  display: flex;
+  align-items: flex-start;   /* both columns start at the top */
+  gap: 24px;                 /* space between the columns */
+}
+
+/* Left column (the cards). flex: 1 means "take 1 share of the space" */
+#info-column {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Right column (the photo). flex: 1.2 gives the photo a slightly bigger share */
+.profile-photo {
+  flex: 1.2;
+  min-width: 0;
+  aspect-ratio: 1 / 1.1;     /* the shape of the photo box */
+  object-fit: cover;         /* crops the picture to fill the box */
+  object-position: bottom;   /* removes the empty space above my head */
+  border-radius: 18px;
+  position: sticky;          /* the photo stays in view while scrolling */
+  top: 16px;
+}
+
+
+/* ===== CARDS ===== */
+
+/* The see-through glass boxes that hold each section */
 .glass-card {
-  width: fit-content;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 1.25rem 0;
+  margin: 0 0 1.25rem;
   padding: 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 20px;
@@ -97,11 +116,7 @@ h3 {
   backdrop-filter: blur(14px);
 }
 
-.glass-card > header h2 {
-  margin-top: 0;
-}
-
-#about {
+.glass-card h2 {
   margin-top: 0;
 }
 
@@ -109,9 +124,12 @@ h3 {
   text-align: left;
 }
 
+
+/* ===== SCHEDULE TABLE ===== */
+
 #schedule table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse;   /* removes the gaps between cells */
   text-align: left;
 }
 
@@ -125,11 +143,53 @@ h3 {
   color: #d9f3ff;
 }
 
+/* No line under the last row */
 #schedule tr:last-child td {
   border-bottom: 0;
 }
 
+
+/* ===== LINK ===== */
+
 #favorites a {
   color: turquoise;
   text-decoration: none;
+}
+
+
+/* ===== PHONES AND TABLETS (screens 900px wide or smaller) ===== */
+
+@media (max-width: 900px) {
+  /* Stack everything in one column */
+  #profile-layout {
+    flex-direction: column;
+  }
+
+  #info-column {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Photo goes first and gets smaller */
+  .profile-photo {
+    flex: none;
+    order: -1;
+    width: 100%;
+    max-width: 360px;
+    align-self: center;
+    position: static;
+  }
+
+  #top h1 {
+    font-size: 2.5rem;
+  }
+
+  #navbar ul {
+    font-size: 1.2rem;
+  }
+
+  /* Lets the table scroll sideways if it is too wide */
+  #schedule {
+    overflow-x: auto;
+  }
 }
